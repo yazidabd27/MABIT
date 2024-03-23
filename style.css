@@ -1,0 +1,335 @@
+:root{
+    --Vert: #A4DB61;
+    --BL: #262D56;
+    --Maron: #8C5151;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* header */
+
+.container{
+    margin: 0 180px;
+}
+
+header{
+    background-color: var(--Vert);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+}
+
+ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+.logo{
+    display: flex;
+    align-items:center;
+}
+
+.logo img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+header .logo span{
+    color:var(--BL);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav button{
+    background-color: var(--Maron);
+    border: none;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 15px 30px;
+}
+
+header a{
+    color: var(--BL);
+    text-decoration: none;
+}
+
+header button a{
+    color: #fff;
+    font-weight: bold;
+}
+
+/* hero section */
+
+#hero img{
+    max-height: 90vh;
+    width: 100%;
+    display: none;
+}
+
+#hero img.active{
+    display: block;
+}
+
+#hero h1{
+    font-size: 64px;
+    font-weight: bold;
+    color: var(--BL);
+    margin-bottom: 40px;
+}
+
+#hero .hero-container{
+    position: relative;
+    overflow: hidden;
+}
+
+#hero .hero-description{
+    position: absolute;
+    top: 250px;
+    left: 180px;
+    width: 50%;
+}
+
+#hero button {
+    padding: 20px 40px;
+    border-radius: 20px;
+    background-color: var(--Vert);
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#hero button a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero .social-media i{
+    color: var(--Vert);
+    font-size: 48px;
+}
+
+/* about */
+
+#about{
+    padding: 100px 0; 
+    text-align: center;  
+}
+
+#about h1{
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--BL);
+    margin-bottom: 40px;
+}
+
+#about .about-description{
+    transform: translateX(-200%);
+    transition-duration: 2s;
+}
+
+#about .about-description.visible{
+    transform: translateX(0);
+}
+
+#about p{
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+#about p.visible{
+    transform: translateX(0);
+}
+
+/* service */
+
+#services{
+    background-color: var(--Vert);
+    padding: 100px 0;
+}
+
+#services h1{
+    font-size: 48px;
+    color: var(--BL);
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+#services .cards{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#services .card{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+#services .card.visible{
+    opacity: 1;
+}
+
+#services img{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 40px;
+}
+
+#services .cards h3{
+    font-size: 24px;
+    color: var(--BL);
+    margin-bottom: 40px;
+    flex-grow: 1;
+}
+
+#services .cards p{
+    line-height: 1.5;
+    color: var(--BL);
+}
+
+/* contact */
+
+#contact{
+    padding: 100px 0; 
+}
+
+#contact h1{
+    text-align: center;
+    color: var(--BL);
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#contact form div{
+    margin: 20px 0;
+}
+
+#contact input,
+textarea{
+    border: none;
+    border-bottom: 1px solid var(--BL);
+    outline: none;
+    background-color: #f5f5f5;
+    width: 600px;
+    padding: 10px;
+}
+
+#contact input:focus,
+#contact textarea:focus{
+    border-color: var(--Maron);
+}
+
+.contact{
+    display: flex;
+}
+
+.contact-info{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.email{
+    margin-bottom: 10px;
+}
+
+.contact i{
+    color: var(--BL);
+    margin-right: 10px;
+}
+
+#contact button{
+    padding: 15px 30px;
+    background-color: var(--Maron);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#contact .whatsapp{
+    margin-top: 40px;
+}
+
+#contact .whatsapp a{
+    background-color: var(--Vert);
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--BL);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#contact .whatsapp i{
+    font-size: 32px;
+    font-weight: bolder;
+    margin-right: 20px;
+}
+
+/* footer */
+
+footer{
+    background-color: var(--BL);
+    padding: 40px 0;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .logo span{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+}
+
+.social-media i{
+    color: var(--Vert);
+    padding: 0 20px;
+    font-size: 28px;
+}
+
+footer .copy-right{
+    color: #fff;
+    font-size: 28px;
+}
