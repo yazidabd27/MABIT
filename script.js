@@ -27,3 +27,18 @@ window.onscroll=(()=>{
     })
   }
 })
+
+
+let dropDown=false;
+var burgerIcon=document.querySelector('.burger-icon');
+var navBar=document.querySelector('nav');
+
+burgerIcon.onclick=()=>{
+  if(!dropDown){
+    navBar.classList.add('active');
+    dropDown=true;
+  }else{
+    navBar.classList.remove('active');
+    dropDown=false;
+  }
+}
