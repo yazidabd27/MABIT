@@ -19,13 +19,14 @@ window.onscroll=(()=>{
     prg.classList.add('visible');
   }
   
-  if(window.scrollY>=services.offsetTop - 500){
-    cards.forEach((card, index)=>{
-      setTimeout(()=>{
-        card.classList.add('visible');
-      }, index*750)
-    })
-  }
+  
+  cards.forEach((card)=>{
+    
+    if(window.scrollY>=card.offsetTop - 500){
+    card.classList.add('visible');
+    }
+  })
+  
 })
 
 

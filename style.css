@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root{
-    --Vert: #A4DB61;
-    --BL: #262D56;
-    --Maron: #8C5151;
+    --BF: #1A5276;
+    --GL: #FFD700;
+    --vert: #2ECC71;
+    --RB: #C0392B;
+    --GR: #95A5A6
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -19,7 +23,7 @@
 }
 
 header{
-    background-color: var(--Vert);
+    background-color: var(--BF);
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -38,7 +42,6 @@ ul{
 ul li{
     list-style: none;
     margin: 0 10px;
-    font-weight: 600;
 }
 
 .logo{
@@ -54,9 +57,9 @@ ul li{
 }
 
 header .logo span{
-    color:var(--BL);
+    color:var(--GL);
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 header nav{
@@ -64,26 +67,35 @@ header nav{
     align-items: center;
 }
 
-header nav button{
-    background-color: var(--Maron);
+header nav .button{
+    background-color: var(--RB);
     border: none;
     border-radius: 10px;
     margin: 0 10px;
     padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+header nav .button:hover{
+    transform: scale(1.1);
+    background-color: var(--vert);
 }
 
 header a{
-    color: var(--BL);
+    color: var(--GL);
     text-decoration: none;
+    font-weight: 500;
+    transition: .5s ease;
 }
 
-header button a{
-    color: #fff;
-    font-weight: bold;
+header a:hover{
+    color: var(--GR);
 }
 
 header i{
-    color: var(--BL);
+    color: var(--GL);
     font-size: 28px;
     cursor: pointer;
     display: none;
@@ -107,8 +119,9 @@ header i{
 #hero h1{
     font-size: 64px;
     font-weight: bold;
-    color: var(--BL);
+    color: var(--GL);
     margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #hero .hero-container{
@@ -118,28 +131,43 @@ header i{
 
 #hero .hero-description{
     position: absolute;
-    top: 250px;
+    top: 50%;
     left: 180px;
     width: 50%;
+    transform: translateY(-25%);
 }
 
-#hero button {
+#hero .button {
     padding: 20px 40px;
     border-radius: 20px;
-    background-color: var(--Vert);
+    background-color: var(--RB);
     border: none;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease;
 }
 
-#hero button a{
-    color: #fff;
+#hero .button:hover{
+    transform: scale(1.1);
+    background-color: var(--vert);
+}
+
+#hero .button a{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--GL);
     text-decoration: none;
 }
 
 #hero .social-media i{
-    color: var(--Vert);
+    color: var(--GL);
     font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: .5s ease;
+}
+
+.social-media i:hover{
+    transform: scale(1.1);
 }
 
 /* about */
@@ -152,8 +180,9 @@ header i{
 #about h1{
     font-size: 48px;
     font-weight: bold;
-    color: var(--BL);
+    color: var(--BF);
     margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #about .about-description{
@@ -168,6 +197,7 @@ header i{
 #about p{
     padding: 10px 0;
     line-height: 1.5;
+    font-style: italic;
 }
 
 #about p.visible{
@@ -177,30 +207,37 @@ header i{
 /* service */
 
 #services{
-    background-color: var(--Vert);
+    background-color: var(--BF);
     padding: 100px 0;
 }
 
 #services h1{
     font-size: 48px;
-    color: var(--BL);
-    margin-bottom: 80px;
+    color: var(--GL);
+    margin-bottom: 20px;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
-#services .cards{
-    display: flex;
-    justify-content: space-between;
+#services .service-description{
     text-align: center;
+    margin-bottom: 80px;
 }
 
 #services .card{
     padding: 0 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     opacity: 0;
     transition: opacity 2s ease-in;
+    margin-bottom: 100px;
+}
+
+#services .card:nth-child(2),
+#services .card:nth-child(4){
+    flex-direction: row-reverse;
 }
 
 #services .card.visible{
@@ -208,21 +245,25 @@ header i{
 }
 
 #services img{
-    width: 120px;
-    height: 120px;
-    margin-bottom: 40px;
+   width: 50%;
+   height: 600px;
+}
+
+#services .card-description{
+    margin:0 40px;
+    text-align: center;
 }
 
 #services .cards h3{
-    font-size: 24px;
-    color: var(--BL);
-    margin-bottom: 40px;
+    font-size: 32px;
+    color: var(--GL);
+    margin-bottom: 20px;
     flex-grow: 1;
 }
 
-#services .cards p{
+#services p{
     line-height: 1.5;
-    color: var(--BL);
+    color: var(--GR);
 }
 
 /* contact */
@@ -233,10 +274,11 @@ header i{
 
 #contact h1{
     text-align: center;
-    color: var(--BL);
+    color: var(--BF);
     margin-bottom: 40px;
     font-weight: bold;
     font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #contact form div{
@@ -246,7 +288,7 @@ header i{
 #contact input,
 textarea{
     border: none;
-    border-bottom: 1px solid var(--BL);
+    border-bottom: 1px solid var(--BF);
     outline: none;
     background-color: #f5f5f5;
     width: 600px;
@@ -255,7 +297,7 @@ textarea{
 
 #contact input:focus,
 #contact textarea:focus{
-    border-color: var(--Maron);
+    border-color: var(--GL);
 }
 
 .contact{
@@ -272,36 +314,48 @@ textarea{
 }
 
 .contact i{
-    color: var(--BL);
+    color: var(--BF);
     margin-right: 10px;
 }
 
 #contact button{
     padding: 15px 30px;
-    background-color: var(--Maron);
-    color: #fff;
+    background-color: var(--RB);
+    color: var(--GL);
     border: none;
     border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+#contact button:hover{
+    background-color: var(--vert);
+    transform: scale(1.1);
 }
 
 #contact .whatsapp{
     margin-top: 40px;
 }
 
+#contact .whatsapp a:hover{
+    transform: scale(1.1);
+}
+
 #contact .whatsapp a{
-    background-color: var(--Vert);
+    background-color: var(--vert);
     text-decoration: none;
     padding: 20px 40px;
     border-radius: 20px;
     font-size: 24px;
     font-weight: bold;
-    color: var(--BL);
+    color: var(--BF);
     display: flex;
     align-items: center;
     width: fit-content;
     margin: 0 auto;
+    transition: .5s ease;
 }
 
 #contact .whatsapp i{
@@ -313,7 +367,7 @@ textarea{
 /* footer */
 
 footer{
-    background-color: var(--BL);
+    background-color: var(--BF);
     padding: 40px 0;
 }
 
@@ -324,9 +378,9 @@ footer .container{
 }
 
 footer .logo span{
-    color: #fff;
+    color: var(--GL);
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .social-media{
@@ -335,14 +389,16 @@ footer .logo span{
 }
 
 .social-media i{
-    color: var(--Vert);
+    color: var(--GL);
     padding: 0 20px;
-    font-size: 28px;
+    font-size: 20px;
+    transition: .5s ease;
 }
 
 footer .copy-right{
-    color: #fff;
-    font-size: 28px;
+    color: var(--GL);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 @media (max-width:1115px) {
@@ -351,8 +407,7 @@ footer .copy-right{
     }
 
     #hero .hero-description{
-        top: 200px;
-        left: 50px;
+        left: 90px;
     }
 
     #hero h1{
@@ -360,18 +415,20 @@ footer .copy-right{
     }
 }
 
-@media (max-width:870px) {
-    .cards,
-    .contact{
-        flex-direction: column;
-    }
+@media (max-width:900px) {
+    .container{margin: 0 45px;}
 
-    .card{
-        margin: 20px 0;
+    #hero .hero-description{left: 45px;}    
+
+    #services img{height: 400px;}
+
+    #contact input,
+    textarea{
+        width: 450px;
     }
 
     .contact-info{
-        margin-left: 0;
+        margin-left: 20px;
     }
 }
 
@@ -380,15 +437,18 @@ footer .copy-right{
         position: relative;
     }
 
+    #hero img{
+        height: 70vh;
+    }
+
     nav{
         position: absolute;
         flex-direction: column;
         width: 100%;
         height: 200px;
-        background-color: #fff;
         z-index: 100;
         transition: 1s ease-in-out;
-        background-color: var(--Vert);
+        background-color: var(--BF);
         padding: 20px;
         left: 0;
         top: 0;
@@ -413,39 +473,61 @@ footer .copy-right{
         display: block;
     }
 
-    .container{
-        margin: 0 40px;
-    }
 }
 
 @media (max-width:660px) {
-    #hero .hero-description h1{
-        font-size: 40px;
-    }
     .container{
         margin: 0 20px;
+    }
+
+    #hero .hero-description{left: 20px;}
+
+    .contact{
+        flex-direction: column;
+    }
+
+    .contact-info{
+        margin-left: 0;
     }
 
     #contact input,
     textarea{
         width: 100%;
     }
+}
 
-    #hero .social-media button{
+@media (max-width:500px) {
+    #hero h1{font-size: 32px;}
+
+    #hero .button{
         padding: 10px 20px;
+        border-radius: 10px;
     }
 
     #hero i{
         font-size: 32px !important;
-        padding: 0 10px;
+    }
+
+    section .container > h1{
+        font-size: 32px !important;
+    }
+
+    #services .card{ flex-direction: column !important;}
+
+    #services img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #services h3{
+        font-size: 24px !important;
+    }
+
+    .whatsapp a{
+        font-size: 16px !important;
     }
 
     footer i{
-        padding: 0 10px !important;
+        padding: 0 10px !important; 
     }
-
-    footer .copy-right{
-        font-size: 20px;
-    }
-    
 }
