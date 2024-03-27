@@ -68,7 +68,7 @@ header nav{
 }
 
 header nav .button{
-    background-color: var(--RB);
+    background-color: var(--vert);
     border: none;
     border-radius: 10px;
     margin: 0 10px;
@@ -76,11 +76,12 @@ header nav .button{
     font-size: 16px;
     cursor: pointer;
     transition: .5s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 header nav .button:hover{
     transform: scale(1.1);
-    background-color: var(--vert);
+    background-color: var(--RB);
 }
 
 header a{
@@ -121,7 +122,7 @@ header i{
     font-weight: bold;
     color: var(--GL);
     margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 1);
 }
 
 #hero .hero-container{
@@ -140,7 +141,7 @@ header i{
 #hero .button {
     padding: 20px 40px;
     border-radius: 20px;
-    background-color: var(--RB);
+    background-color: var(--vert);
     border: none;
     font-size: 20px;
     font-weight: bold;
@@ -150,11 +151,11 @@ header i{
 
 #hero .button:hover{
     transform: scale(1.1);
-    background-color: var(--vert);
+    background-color: var(--RB);
 }
 
 #hero .button a{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     color: var(--GL);
     text-decoration: none;
 }
@@ -162,7 +163,7 @@ header i{
 #hero .social-media i{
     color: var(--GL);
     font-size: 48px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     transition: .5s ease;
 }
 
@@ -320,7 +321,7 @@ textarea{
 
 #contact button{
     padding: 15px 30px;
-    background-color: var(--RB);
+    background-color: var(--vert);
     color: var(--GL);
     border: none;
     border-radius: 20px;
@@ -328,10 +329,11 @@ textarea{
     font-weight: 500;
     cursor: pointer;
     transition: .5s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 #contact button:hover{
-    background-color: var(--vert);
+    background-color: var(--RB);
     transform: scale(1.1);
 }
 
@@ -412,6 +414,7 @@ footer .copy-right{
 
     #hero h1{
         font-size: 48px;
+        text-shadow: 6px 6px 4px rgba(0, 0, 0, 1);
     }
 }
 
@@ -435,10 +438,6 @@ footer .copy-right{
 @media (max-width:830px) {  
     header{
         position: relative;
-    }
-
-    #hero img{
-        height: 70vh;
     }
 
     nav{
@@ -497,11 +496,18 @@ footer .copy-right{
 }
 
 @media (max-width:500px) {
-    #hero h1{font-size: 32px;}
+    #hero h1{
+        font-size: 32px;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+    }
 
     #hero .button{
         padding: 10px 20px;
         border-radius: 10px;
+    }
+
+    #hero img{
+        height: 70vh;
     }
 
     #hero i{
