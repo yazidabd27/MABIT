@@ -1,3 +1,4 @@
+// auto slide
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll('#hero img');
     let currentImg = 0;
@@ -9,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 3000);
 });
 
+// animation
 var about=document.querySelector('#about');
 var prg=document.querySelector('#about .about-description');
-var services=document.querySelector('#services');
 var cards=document.querySelectorAll('.cards .card');
 
 window.onscroll=(()=>{
@@ -30,6 +31,7 @@ window.onscroll=(()=>{
 })
 
 
+// navbar
 let dropDown=false;
 var burgerIcon=document.querySelector('.burger-icon');
 var navBar=document.querySelector('nav');
@@ -43,3 +45,17 @@ burgerIcon.onclick=()=>{
     dropDown=false;
   }
 }
+ 
+// language selector
+ 
+let languageToggler=document.querySelector('select');
+const changeLanguage=()=>{
+  let selectedLanguage=languageToggler.value;
+  if(selectedLanguage==='FR'){
+    window.location.href='index.html';
+  }else{
+    window.location.href='index_ar.html';
+  }
+}
+
+languageToggler.addEventListener('change', changeLanguage);
