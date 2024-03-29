@@ -268,6 +268,7 @@ header i{
 #services .card-description{
     margin:0 40px;
     text-align: center;
+    width: 50%;
 }
 
 #services .cards h3{
@@ -550,6 +551,10 @@ footer .copy-right{
     #services img{
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    #services .card-description{
+        width: 100%;
     }
 
     #services h3{
