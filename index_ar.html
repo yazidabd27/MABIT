@@ -7,6 +7,7 @@
         <meta name="keywords" content="تنظيف الشقة, إستقبال العملاء, تنظيف الشقة, إدارة الشقق, إدارة حسابات الايجار">
         <title>Mabit</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
         <script src="https://kit.fontawesome.com/260af2b2e0.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -129,16 +130,16 @@
             <div class="container">
                 <h1>تواصل معنا</h1>
                 <div class="contact">
-                    <form action="">
-                        <div><input type="text" name="" placeholder="الإسم" dir="rtl"></div>
-                        <div><input type="email" name="" placeholder="الايمايل" dir="rtl"></div>
-                        <div><textarea name="" id="" cols="30" rows="10" placeholder="الرسالة" dir="rtl"></textarea></div>
-                        <div style="text-align: right;"><button>إرسال</button></div>
+                    <form action="process_form.php" method="POST">
+                        <div><input type="text" name="name" placeholder="الإسم" dir="rtl"></div>
+                        <div><input type="email" name="email" placeholder="الايمايل" dir="rtl"></div>
+                        <div><textarea name="message" id="" cols="30" rows="10" placeholder="الرسالة" dir="rtl"></textarea></div>
+                        <div style="text-align: right;"><button type="submit">إرسال</button></div>
                     </form>
                     <div class="contact-info">
                         <div class="email">
                             <i class="fa-solid fa-envelope"></i>
-                            nom@gmial.com
+                            mabitdz@ouchene-hebergement.dz
                         </div>
                         <div class="phone-number">
                             <i class="fa-solid fa-phone"></i>

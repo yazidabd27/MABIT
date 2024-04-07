@@ -5,16 +5,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
     
     $to = 'mabitdz@ouchene-hebergement.dz'; 
-    $subject = 'New form submission';
-    $body = "Name: $name\nEmail: $email\nMessage: $message";
-    $headers = "From: $email";
+    $subject = 'Nouveau Message De Mabit';
+    $body = "Nom: $name\nEmail: $email\nMessage: $message";
+    $headers = "De: $email";
     
     if (mail($to, $subject, $body, $headers)) {
-        echo 'Thank you for your submission!';
+        echo 'Merci Pour Votre Message!';
     } else {
-        echo 'There was a problem sending your message. Please try again later.';
+        echo "Un problème est survenu lors de l'envoi de votre message. Veuillez réessayer plus tard.";
     }
 } else {
-    echo 'This page cannot be accessed directly.';
+    echo "Cette page n'est pas accessible directement.";
 }
 ?>
