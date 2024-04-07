@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mabit</title>
+        <meta name="description" content="Bienvenue chez MABIT.dz votre partenaire de confiance dans la gestion de locations de courte durée pour vos appartements. Nous sommes une équipe passionnée et expérimentée, 
+        dédiée à offrir des solutions de gestion immobilière de première classe à nos propriétés.">
+        <meta name="keywords" content="Gestion des comptes airbnb et booking, Gestoin des locations à courte terme, Reception Locataire, Nettoyage Appartements">
+        <title>MABIT</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/260af2b2e0.js" crossorigin="anonymous"></script>
     </head>
@@ -45,8 +48,8 @@
                     <h1>Simplifiez la Gestion de Vos Locations</h1>
                     <div class="social-media">
                         <div class="button"><a href="#contact">Contactez</a></div>
-                        <div><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-                        <div><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                        <div><a href="https://www.facebook.com/profile.php?id=61557846484445&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+                        <div><a href="https://www.instagram.com/mabit.dz?igsh=OWIyNXpya2piNG9h" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
                         <div><a href=""><i class="fa-brands fa-tiktok"></i></a></div>
                     </div>
                 </div>
@@ -57,7 +60,7 @@
                 <h1>A Propos De Nous</h1>
                 <div class="about-description">
                     <p>
-                        Bienvenue chez MABIT Expertise votre partenaire de confiance dans la gestion de locations de courte durée pour vos appartements. Nous sommes une équipe passionnée et expérimentée, 
+                        Bienvenue chez Mabitdz votre partenaire de confiance dans la gestion de locations de courte durée pour vos appartements. Nous sommes une équipe passionnée et expérimentée, 
                         dédiée à offrir des solutions de gestion immobilière de première classe à nos propriétés.
                     </p>
                     <p>
@@ -66,7 +69,7 @@
                         en veillant à ce que nos propriétaires et nos clients bénéficient d'une expérience de séjour de premier ordre.
                     </p>
                     <p>
-                        Chez MABIT Expertise, nous sommes là pour vous accompagner à chaque étape du processus de location, de la commercialisation de votre propriété à l'entretien et au nettoyage après 
+                        Chez Mabitdz, nous sommes là pour vous accompagner à chaque étape du processus de location, de la commercialisation de votre propriété à l'entretien et au nettoyage après 
                         chaque séjour. Faites nous confiance pour prendre soin de votre logement.
                     </p>
                 </div>
@@ -76,22 +79,22 @@
             <div class="container">
                 <h1>Nos Services</h1>
                 <p class="service-description">
-                    Besoin de professionnels agréer. Expérimentés et à votre écoute. Nous accordons un soin tout particulier de votre investissement. 
+                    Besoin de professionnels agrée, Expérimentés et à votre écoute? Nous accordons un soin tout particulier de votre investissement. 
                     Nous réalisons tous les projets de manière efficace et dans les délais impartis et faisons notre maximum pour établir des relations durables avec nos clients 
                 </p>
                 <div class="cards">
                     <div class="card">
-                        <img src="img/img-card1.jpg" alt="">
+                        <img src="img/sécurité-appartement.jpg" alt="">
                         <div class="card-description">
                             <h3>Sécurité</h3>
                             <p>
                                 Vous envisagez de vous lancer a accueillir des clients, vous vous demandez sans doute comment protéger votre logement et vos effets personnels pendant que les clients séjournent chez vous,
-                                 Mabit Expertise a prévu un certain nombre de protection pour les propriétaires et les clients. 
+                                 Mabitdz a prévu un certain nombre de protection pour les propriétaires et les clients. 
                             </p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="img/img-card2.jpg" alt="">
+                        <img src="img/compte-airbnb-booking.jpg" alt="">
                         <div class="card-description">
                             <h3>Gestion des comptes airbnb<br> et booking et autres plaformes</h3>
                             <p>
@@ -101,7 +104,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="img/img-card3.png" alt="">
+                        <img src="img/reception-locataire.png" alt="">
                         <div class="card-description">
                             <h3>Réception</h3>
                             <p>
@@ -111,7 +114,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="img/img-card4.jpg" alt="">
+                        <img src="img/nettoyage-appartement.jpg" alt="">
                         <div class="card-description">
                             <h3>Nettoyage</h3>
                             <p>
@@ -121,7 +124,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="img/img-card5.png" alt="">
+                        <img src="img/vérification-location.png" alt="">
                         <div class="card-description">
                             <h3>Vérification</h3>
                             <p>
@@ -137,11 +140,11 @@
             <div class="container">
                 <h1>Contactez-nous</h1>
                 <div class="contact">
-                    <form action="">
-                        <div><input type="text" name="" placeholder="Nom"></div>
-                        <div><input type="email" name="" placeholder="E-mail" ></div>
-                        <div><textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea></div>
-                        <div><button>Envoyer</button></div>
+                    <form action="process_form.php" method="POST">
+                        <div><input type="text" name="name" placeholder="Nom" required></div>
+                        <div><input type="email" name="email" placeholder="E-mail" required></div>
+                        <div><textarea name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea></div>
+                        <div><button type="submit">Envoyer</button></div>
                     </form>
                     <div class="contact-info">
                         <div class="email">
@@ -150,12 +153,12 @@
                         </div>
                         <div class="phone-number">
                             <i class="fa-solid fa-phone"></i>
-                            213797908098
+                            +213792466710
                         </div>
                     </div>
                 </div>
                 <div class="whatsapp">
-                    <a href="https://wa.me/213797908098" target="_blank"><i class="fa-brands fa-whatsapp"></i>Envoyer un message sur WhatsApp</a>
+                    <a href="https://wa.me/213792466710" target="_blank"><i class="fa-brands fa-whatsapp"></i>Envoyer un message sur WhatsApp</a>
                 </div>
             </div>
         </section>
@@ -166,8 +169,8 @@
                     <span>MABIT</span>
                 </div>
                 <div class="social-media">
-                    <div><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-                    <div><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                    <div><a href="https://www.facebook.com/profile.php?id=61557846484445&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+                    <div><a href="https://www.instagram.com/mabit.dz?igsh=OWIyNXpya2piNG9h" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
                     <div><a href=""><i class="fa-brands fa-tiktok"></i></a></div>
                 </div>
                 <div class="copy-right">&copy; 2024</div>

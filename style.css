@@ -501,6 +501,17 @@ footer .copy-right{
 
     #hero .hero-description{left: 20px;}
 
+    #services .card{ flex-direction: column !important;}
+
+    #services img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #services .card-description{
+        width: 100%;
+    }
+
     .contact{
         flex-direction: column;
     }
@@ -544,17 +555,6 @@ footer .copy-right{
 
     section .container > h1{
         font-size: 32px !important;
-    }
-
-    #services .card{ flex-direction: column !important;}
-
-    #services img{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #services .card-description{
-        width: 100%;
     }
 
     #services h3{
